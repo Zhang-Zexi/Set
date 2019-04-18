@@ -70,6 +70,7 @@ public class BST<E extends Comparable> {
         if(e.compareTo(node.e) < 0) {
             node.left = add(node.left, e);
         }else if(e.compareTo(node.e) > 0){
+            //此处不能相等，因为二叉树不能插入相同的元素
             node.right = add(node.right, e);
         }
         return node;
